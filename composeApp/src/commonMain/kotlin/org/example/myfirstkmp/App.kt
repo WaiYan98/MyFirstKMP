@@ -12,17 +12,19 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import org.example.myfirstkmp.data.remote.dto.Post
-import org.example.myfirstkmp.di.networkComponent
+import org.example.myfirstkmp.di.ShareNetworkComponent
 
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
 fun App(
-    device: Device
+    device: Device,
+    networkComponent: ShareNetworkComponent
 ) {
     MaterialTheme {
-        val postRepository = networkComponent().postRepository
+
+        val postRepository = networkComponent.postRepository
 
         var postList by remember { mutableStateOf(emptyList<Post>()) }
 

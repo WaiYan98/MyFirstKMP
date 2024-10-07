@@ -6,12 +6,10 @@ import org.example.myfirstkmp.data.remote.PostRepository
 import org.example.myfirstkmp.data.remote.PostRepositoryImpl
 
 @Component
-abstract class NetworkComponent(@Component val appComponent: AppComponent) {
+abstract class ShareNetworkComponent(@Component val shareAppComponent: ShareAppComponent) {
 
     abstract val postRepository: PostRepository
 
     @Provides
     fun PostRepositoryImpl.bind(): PostRepository = this
 }
-
-expect fun networkComponent(): NetworkComponent
