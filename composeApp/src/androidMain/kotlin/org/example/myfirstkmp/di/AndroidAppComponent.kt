@@ -1,6 +1,5 @@
 package org.example.myfirstkmp.di
 
-import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.engine.android.Android
 import me.tatarka.inject.annotations.Component

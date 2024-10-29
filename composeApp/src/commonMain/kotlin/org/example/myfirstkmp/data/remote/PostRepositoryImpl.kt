@@ -26,8 +26,7 @@ class PostRepositoryImpl(private val client: HttpClient) : PostRepository {
             return@withContext httpResponse.body()
 
         } catch (e: Exception) {
-            print(e.printStackTrace())
-            return@withContext emptyList()
+            throw e
         }
     }
 }

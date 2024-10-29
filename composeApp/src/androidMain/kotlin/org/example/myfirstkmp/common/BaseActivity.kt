@@ -1,6 +1,7 @@
 package org.example.myfirstkmp.common
 
 import androidx.activity.ComponentActivity
+
 import org.example.myfirstkmp.di.ShareNetworkComponent
 import org.example.myfirstkmp.di.create
 
@@ -13,5 +14,4 @@ open class BaseActivity : ComponentActivity() {
     protected val networkComponent by lazy {
         ShareNetworkComponent::class.create(androidAppComponent)
     }
-
 }
